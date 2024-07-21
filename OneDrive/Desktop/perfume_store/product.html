@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Perfume Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-image: url(b1.jfif);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .hidden {
+            display: none;
+        }
+        .product-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .product-buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: rgb(132, 132, 132);
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-buttons button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.jfif" alt="Perfume">   Perfume Store</div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="products" class="section">
+        <h2>Our Products</h2>
+        <div class="product-buttons">
+            <button onclick="showProducts('women')">Women</button>
+            <button onclick="showProducts('men')">Men</button>
+        </div>
+           
+        <div id="womenProducts" class="hidden">
+            <h3>Women Perfumes</h3>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="w6.avif" alt="Perfume 3">
+                    <h3 style="color: black;">Perfume 1</h3>
+                    <p>Pkr 7000</p>
+                </div>
+                <div class="product">
+                    <img src="w7.avif" alt="Perfume 3">
+                    <h3 style="color: black;">Perfume 2</h3>
+                    <p>Pkr 7000</p>
+                </div>
+                <div class="product">
+                    <img src="w5.avif" alt="Perfume 3">
+                    <h3 style="color: black;">Perfume 3</h3>
+                    <p>Pkr 7000</p>
+                </div>
+                <div class="product">
+                    <img src="w4.avif" alt="Perfume 3">
+                    <h3 style="color: black;">Perfume 4</h3>
+                    <p>Pkr 7000</p>
+                </div>
+                <div class="product">
+                    <img src="w3.avif" alt="Perfume 3">
+                    <h3 style="color: rgb(20, 20, 20);">Perfume 5</h3>
+                    <p>Pkr 7000</p>
+                </div>
+                <div class="product">
+                    <img src="w2.avif" alt="Perfume 3">
+                    <h3 style="color: black;">Perfume 6</h3>
+                    <p>Pkr 7000</p>
+                </div>
+               
+            </div>
+        </div>
+        <div id="menProducts" class="hidden">
+            <h3>Men Perfumes</h3>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="5.jpg" alt="Perfume 1">
+                    <h3 style="color: black;">Perfume 1</h3>
+                    <p>Pkr 5000</p>
+                </div>
+                <div class="product">
+                    <img src="7.jpg" alt="Perfume 1">
+                    <h3 style="color: black;">Perfume 1</h3>
+                    <p>Pkr 5000</p>
+                </div>
+                <div class="product">
+                    <img src="4.jpg" alt="Perfume 1">
+                    <h3 style="color: black;">Perfume 1</h3>
+                    <p>Pkr 5000</p>
+                </div>
+                <div class="product">
+                    <img src="1.jpg" alt="Perfume 1">
+                    <h3 style="color: black;">Perfume 1</h3>
+                    <p>Pkr 5000</p>
+                </div>
+                <div class="product">
+                    <img src="5.jpg" alt="Perfume 1">
+                    <h3 style="color: black;">Perfume 1</h3>
+                    <p>Pkr 5000</p>
+                </div>
+                <div class="product">
+                    <img src="7.jpg" alt="Perfume 1">
+                    <h3 style="color: black;">Perfume 1</h3>
+                    <p>Pkr 5000</p>
+                </div>
+
+            </div>
+        </div>
+        
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Boss</p>
+    </footer>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('open');
+        });
+
+        function showProducts(category) {
+          
+            document.getElementById('womenProducts').classList.add('hidden');
+            document.getElementById('menProducts').classList.add('hidden');
+
+           
+            document.getElementById(category + 'Products').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

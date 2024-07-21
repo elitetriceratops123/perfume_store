@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Perfume Store</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1{
+            text-align: center;
+        }
+        .ba{
+            hyphens: manual;
+        }
+        
+        
+        
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            margin-bottom: 20px;
+        }
+        
+        .section .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+        
+        .section .content img {
+            max-width: 40%;
+            margin-bottom: 20px;
+        }
+        .section .content p {
+            max-width: 50%;
+            margin-bottom: 20px;
+        }
+        .section .content.left p {
+            order: -1; 
+        }
+        .section .content.right img {
+            order: -1; 
+        }
+        @media screen and (max-width: 768px) {
+            .section .content img, .section .content p {
+                max-width: 100%;
+                order: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.jfif" alt="Perfume">   Perfume Store</div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>About Us</h1>
+    <section id="about" class="section">
+        <div class="content left">
+            <p>Welcome to Perfume Store, where passion meets fragrance.
+                 Established in [2024], Perfume Store has become a haven
+                  for perfume lovers who seek quality, sophistication, and
+                   uniqueness in every bottle. Our journey began with a simple
+                    desire: to create unforgettable scents that inspire and evoke emotions.</p>
+            <img src="a5.jfif" alt="Left Image">
+        </div>
+        <h3>Our Mission</h3>
+        <div class="content right">
+            <img src="a3.jfif" alt="Right Image">
+            
+            <p>Our diverse range of perfumes caters to every taste and occasion.
+                 From timeless classics to modern masterpieces, each fragrance in
+                 our collection is meticulously crafted by renowned perfumers who 
+                 share our commitment to excellence. Whether you prefer a light, 
+                 floral scent or a deep, musky aroma, we have the perfect fragrance for you.</p>
+        </div>
+        <h3>Our Collection</h3>
+        <div class="content left">
+            
+            <p>Quality is at the heart of everything we do.
+                 We use only the highest quality ingredients
+                  to ensure that each perfume not only smells divine
+                   but also lasts longer. Our dedication to craftsmanship
+                    means that every bottle of perfume is a work of art, 
+                    designed to delight and captivate your senses.</p>
+            <img src="a4.jfif" alt="Left Image">
+            
+        </div>
+        <h3>Quality and Craftsmanship</h3>
+        <div class="content right">
+            <img src="a4.jfif" alt="Right Image">
+            
+            <p>We are committed to providing our customers with an exceptional
+                 shopping experience. From our beautifully designed bottles to
+                  our elegantly packaged products, every detail is thoughtfully 
+                  considered to ensure your satisfaction. Our knowledgeable and
+                   friendly staff are always here to help you find your perfect scent.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Boss</p>
+    </footer>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
